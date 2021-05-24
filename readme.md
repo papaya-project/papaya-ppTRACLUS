@@ -1,7 +1,5 @@
 # General Information
-This work is implemented under the scope of H2020 PlAtform for PrivAcY-preserving data Analytics (PAPAYA) project and the full version of this work is presented in 
-
-By Beyza Bozdemir¹, Sébastien Canard², Orhan Ermis¹, Helen Möllering³, Melek Önen¹, and Thomas Schneider³. ([¹EURECOM](https://www.eurecom.fr/); [²Applied Cryptography Group, Orange Labs](https://crypto.orange-labs.fr/people/); [³ENCRYPTO, TU Darmstadt](https://www.encrypto.cs.tu-darmstadt.de/home_page/index.en.jsp))
+This work is implemented under the scope of H2020 PlAtform for PrivAcY-preserving data Analytics (PAPAYA) project and the full version of this work is presented by Beyza Bozdemir¹, Sébastien Canard², Orhan Ermis¹, Helen Möllering³, Melek Önen¹, and Thomas Schneider³. ([¹EURECOM](https://www.eurecom.fr/); [²Applied Cryptography Group, Orange Labs](https://crypto.orange-labs.fr/people/); [³ENCRYPTO, TU Darmstadt](https://www.encrypto.cs.tu-darmstadt.de/home_page/index.en.jsp))
 [In 16th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2021)](https://asiaccs2021.comp.polyu.edu.hk/). The full version of the study can be found in [this link](https://eprint.iacr.org/2021/612).
 
 # Build containers
