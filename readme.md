@@ -1,4 +1,10 @@
-# Building
+# General Information
+This work is implemented under the scope of H2020 PlAtform for PrivAcY-preserving data Analytics (PAPAYA) project and the full version of this work is presented in 
+
+By Beyza Bozdemir¹, Sébastien Canard², Orhan Ermis¹, Helen Möllering³, Melek Önen¹, and Thomas Schneider³. ([¹EURECOM](https://www.eurecom.fr/); [²Applied Cryptography Group, Orange Labs](https://crypto.orange-labs.fr/people/); [³ENCRYPTO, TU Darmstadt](https://www.encrypto.cs.tu-darmstadt.de/home_page/index.en.jsp))
+[In 16th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2021)](https://asiaccs2021.comp.polyu.edu.hk/). The full version of the study can be found in [this link](https://eprint.iacr.org/2021/612).
+
+# Build containers
 In  Order  to  build  the  containers,  make  sure  docker  is  installed  and place yourself in the folder containing the 3 Dockerfiles (client_Dockerfile, server1_Dockerfile, server2_Dockerfile).  
 Then run the following commands
 ## Build Client
@@ -48,7 +54,7 @@ sudo docker push de.icr.io/papaya-de/pp-traclus-server2:latest
 
 After activating the server1 and server2 on the papaya platform, we need to run the client locally.
 ```
-sudo docker run -p 5002:5555 -it --rm pp-traclus-client-v3
+sudo docker run -p 5002:5555 -it --rm pp-traclus-client
 ```
 # Init parameters
 Once we run the containers (either in client-server mode or two non-colluding servers mode), we can run clustering algorithm via using those containers.  
