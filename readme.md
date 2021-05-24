@@ -33,7 +33,7 @@ sudo docker run -p 5005:5555 -it --rm pp-traclus-server1
 ```
 sudo docker run -p 5010:5555 -it --rm pp-traclus-server2
 ```
-# Push to IBM
+<!--- # Push to IBM
 Or you can push them to the IBM clouds.
 
 ## Client
@@ -56,7 +56,8 @@ After activating the server1 and server2 on the papaya platform, we need to run 
 ```
 sudo docker run -p 5002:5555 -it --rm pp-traclus-client
 ```
-# Init parameters
+--->
+# Initialize Server-side Components' parameters on the Client-side Component
 Once we run the containers (either in client-server mode or two non-colluding servers mode), we can run clustering algorithm via using those containers.  
 
 Prior to the executing the client 
