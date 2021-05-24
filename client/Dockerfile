@@ -1,0 +1,43 @@
+FROM ubuntu:20.04
+
+#Apply timezone
+ENV DEBIAN_FRONTEND=noninteractive 
+ENV TZ=Europe/Paris
+
+
+#Update and install the Required packages for ABY
+RUN apt-get update -q -y
+RUN apt-get install -y g++ 
+RUN apt-get install -y make 
+RUN apt-get install -y cmake
+RUN apt-get install -y libgmp-dev
+RUN apt-get install -y libssl-dev
+RUN apt-get install -y libboost-all-dev
+RUN apt-get install -y git
+RUN apt-get install -y tmux
+RUN apt-get install -y python3-pip
+RUN pip3 install flask
+RUN apt-get install -y curl
+RUN pip3 install requests
+RUN apt-get install -y net-tools
+#Clone and build ABY
+WORKDIR /home
+RUN git clone https://github.com/encryptogroup/ABY
+COPY ../common/ABYconstants.h /home/ABY/src/abycore/ABY_utils/ABYconstants.h
+WORKDIR /home/ABY
+RUN cmake . -DABY_BUILD_EXE=On
+RUN make 
+
+#Create directories
+RUN mkdir /home/common
+
+#Copy and build server
+COPY client/ /home
+COPY common/ /home/common
+
+
+WORKDIR /home
+RUN cmake . -DABY_BUILD_EXE=On
+RUN make
+CMD ["python3","app.py"]
+
