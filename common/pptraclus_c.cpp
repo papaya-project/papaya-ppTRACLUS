@@ -462,7 +462,7 @@ share* pptraclus(e_role role, const string& address, uint16_t port, seclvl seclv
   
   //Execute the circuit using the ABYParty object
   party->ExecCircuit();
-  cout << "circuit 1 executed" <<endl;
+  /*cout << "circuit 1 executed" <<endl;*/
 
   uint64_t* output1;
   uint64_t* output2;
@@ -510,7 +510,7 @@ share* pptraclus(e_role role, const string& address, uint16_t port, seclvl seclv
   delete party;
 
  
-  cout << "Done" << endl;
+  //cout << "Done" << endl;
 
 
   return s_out;
@@ -526,7 +526,7 @@ share* construct(e_role role, const string& address, uint16_t port, seclvl seclv
 
 
   cout << "Starting" <<endl;
-  cout<<nvals<<endl;
+  //cout<<nvals<<endl;
 
   uint32_t bitlen = 64;
   ABYParty* party = new ABYParty(role, address, port, seclvl, 64, nthreads, mt_alg);
@@ -627,7 +627,7 @@ share* construct(e_role role, const string& address, uint16_t port, seclvl seclv
   
   //Execute the circuit using the ABYParty object
   party->ExecCircuit();
-  cout << "circuit 1 executed" <<endl;
+  //cout << "circuit 1 executed" <<endl;
 /*
   ofstream clusterfile;
   clusterfile.open ("cluster.csv");
@@ -641,7 +641,7 @@ share* construct(e_role role, const string& address, uint16_t port, seclvl seclv
   delete party;
   
 
-  cout << "Done" << endl;
+  //cout << "Done" << endl;
 
 
   return s_out;
@@ -668,7 +668,7 @@ int recoverCluster(e_role role, const string& address, uint16_t port, seclvl sec
   s_cluster = bc->PutOUTGate(s_cluster,CLIENT);
 
   party->ExecCircuit();
-  cout << "circuit executed" <<endl;
+  //cout << "circuit executed" <<endl;
 
 
   if (CLIENT){

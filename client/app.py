@@ -140,7 +140,7 @@ def mode1(e,minlns,threshold,itera):
 		requests.post('http'+IBM+'://'+URL_PUB+'/start/'+e,timeout=0.5)
 	except requests.exceptions.ReadTimeout: 
 		pass
-	print("[-] Starting server")
+	print("[-] Starting Server")
 #	os.system('nohup curl http://'+URL_PUB+'/start/'+e) # IBM
 
 	print("[-] Starting Client")
@@ -276,13 +276,13 @@ def sendfiles(filenumber):
 def round2(e,path,itera):
 	print ('./client -w 1 -e '+str(e)+' -a '+ str(IP_PUB)+' -p '+str(PORT_PUB)+' -i '+path+' -l '+itera)
 	os.system('./client -w 1 -e '+str(e)+' -a '+ str(IP_PUB)+' -p '+str(PORT_PUB)+' -i '+path+' -l '+itera)
-	return jsonify({'message': 'Round2 started'})
+	return jsonify({'message': 'Neighborhood matrix formation started'})
 
 @app.route('/round3/<e>/<path>', methods=['GET', 'POST'])
 def round3(e,path):
 	print ('./client -w 2 -e '+str(e)+' -a '+ str(IP_PUB)+' -p '+str(PORT_PUB)+' -i '+path)
 	os.system('./client -w 2 -e '+str(e)+' -a '+ str(IP_PUB)+' -p '+str(PORT_PUB)+' -i '+path)
-	return jsonify({'message': 'Round 3 finished'})
+	return jsonify({'message': 'Trajectory clustering completed'})
 
 
 @app.route('/uploader', methods = ['GET', 'POST'])
@@ -310,7 +310,7 @@ def upload_file():
 		global FILE_PUB;
 		FILE_PUB = "data/"+fname
       
-	return jsonify({'message': 'file uploaded successfully.'})
+	return jsonify({'message': 'Files uploaded successfully.'})
 
 @app.route("/kill", methods = ['GET', 'POST'])
 def killprocess():
@@ -340,7 +340,7 @@ def check1(e):
 	process = subprocess.Popen('cat cluster.csv | wc -l', shell=True, stdout=subprocess.PIPE)
 	out, err = process.communicate()
 	if (int(e)==int(str(out.decode("utf-8")))):
-		return jsonify({'message': 'Check done'})
+		return jsonify({'message': 'Check completed'})
 	else:
 		return jsonify({'message': 'Check failed'})
 

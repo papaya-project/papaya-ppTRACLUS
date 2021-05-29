@@ -690,7 +690,7 @@ int recoverCluster(e_role role, const string& address, uint16_t port, seclvl sec
   cout << "circuit executed" <<endl;
 
 
-  if (CLIENT){
+  if (role == CLIENT){
 
   uint32_t* output;
   uint32_t out_bitlen, out_nvals;
