@@ -96,10 +96,13 @@ Apply steps above to build and run the client and servers. Then, in the fourth t
 ```
 $ docker ps
 ```
-CONTAINER ID   IMAGE                COMMAND                  CREATED        STATUS        PORTS                    NAMES
-4550bc4635e6   pp-traclus-server2   "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5010->5555/tcp  clever_bhabha
-8d87ed64cf6c   pp-traclus-client    "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5002->5555/tcp  priceless_haibt
-73096f7b91ef   pp-traclus-server1   "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5005->5555/tcp  amazing_wright
+
+
+| CONTAINER ID | IMAGE              | COMMAND          | CREATED      | STATUS      | PORTS                  | NAMES           |
+| ------------ | ------------------ | ---------------- | ------------ | ----------- | ---------------------- | --------------- |
+| 4550bc4635e6 | pp-traclus-server2 | "python3 app.py" | 27 hours ago | Up 27 hours | 0.0.0.0:5010->5555/tcp | clever_bhabha   |
+| 8d87ed64cf6c | pp-traclus-client  | "python3 app.py" | 27 hours ago | Up 27 hours | 0.0.0.0:5002->5555/tcp | priceless_haibt |
+| 73096f7b91ef | pp-traclus-server1 | "python3 app.py" | 27 hours ago | Up 27 hours | 0.0.0.0:5005->5555/tcp | amazing_wright  |
 
 
 
