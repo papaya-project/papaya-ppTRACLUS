@@ -97,14 +97,40 @@ Apply steps above to build and run the client and servers. Then, in the fourth t
 $ docker ps
 ```
 
-
 | CONTAINER ID | IMAGE              | COMMAND          | CREATED      | STATUS      | PORTS                  | NAMES           |
 | ------------ | ------------------ | ---------------- | ------------ | ----------- | ---------------------- | --------------- |
 | 4550bc4635e6 | pp-traclus-server2 | "python3 app.py" | 27 hours ago | Up 27 hours | 0.0.0.0:5010->5555/tcp | clever_bhabha   |
 | 8d87ed64cf6c | pp-traclus-client  | "python3 app.py" | 27 hours ago | Up 27 hours | 0.0.0.0:5002->5555/tcp | priceless_haibt |
 | 73096f7b91ef | pp-traclus-server1 | "python3 app.py" | 27 hours ago | Up 27 hours | 0.0.0.0:5005->5555/tcp | amazing_wright  |
 
+Then check the IP addresses of the server containers. You can learn the IP address of a particular container by issuing the following command:
 
+```
+$ docker inspect [container-id]
+```
+
+In short, by following the example above,
+
+```
+$ docker inspect 73096f7b91ef // for Server 1
+$ docker inspect 4550bc4635e6 // for Server 2
+```
+
+Then you can issue the following command to set server information on the client-side component:
+
+```
+$ curl http://0.0.0.0:5002/init0/172.17.0.2/9999/172.17.0.2:5555/172.17.0.4/9999/172.17.0.4:5555
+```
+
+In this example, we assume that the IP addresses (obtained from the _docker inspect_ command) of servers are 172.17.0.2 and 172.17.0.4 for Server 1 and Server 2, respectively.
+
+Later, you can issue the following command to run the clustering. Please note that this may take couple of times to execute clustering.
+
+```
+$ cd H2020_papaya/papaya-pptraclus/data/
+$ curl -F 'file=@example_route_cleaned.csv' http://0.0.0.0:5002/start/100/3/50000/2
+
+```
 
 # Benchmark
 
