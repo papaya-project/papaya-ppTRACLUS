@@ -32,24 +32,6 @@ sudo docker run -p 5005:5555 -it --rm pp-traclus-server1
 sudo docker run -p 5010:5555 -it --rm pp-traclus-server2
 ```
 
-### Example commands to execute clustering locally:
-
-Open four different terminals (one for client, two for servers and the last one for sending servers' configurations and clustering parameters to the client). 
-
-Please note that if you prefer to use client-server mode, then you do not need to open two different terminals since we will have only one server.
-
-Apply steps above to build and run the client and servers. Then, in the fourth terminal run the following command to list the active docker processes:
-
-```
-$ docker ps
-```
-CONTAINER ID   IMAGE                COMMAND                  CREATED        STATUS        PORTS                    NAMES
-4550bc4635e6   pp-traclus-server2   "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5010->5555/tcp  clever_bhabha
-8d87ed64cf6c   pp-traclus-client    "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5002->5555/tcp  priceless_haibt
-73096f7b91ef   pp-traclus-server1   "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5005->5555/tcp  amazing_wright
-
-
-
 <!--- # Push to IBM
 Or you can push them to the IBM clouds.
 
@@ -102,6 +84,24 @@ Then we can start the clustering, a python function will detect the used mode an
 ```
 curl -F 'file=@DS' http://0.0.0.0:5002/start/E/MS/EPS/IT
 ```
+
+### Example commands to execute clustering locally:
+
+Open four different terminals (one for client, two for servers and the last one for sending servers' configurations and clustering parameters to the client). 
+
+Please note that if you prefer to use client-server mode, then you do not need to open two different terminals since we will have only one server.
+
+Apply steps above to build and run the client and servers. Then, in the fourth terminal run the following command to list the active docker processes:
+
+```
+$ docker ps
+```
+CONTAINER ID   IMAGE                COMMAND                  CREATED        STATUS        PORTS                    NAMES
+4550bc4635e6   pp-traclus-server2   "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5010->5555/tcp  clever_bhabha
+8d87ed64cf6c   pp-traclus-client    "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5002->5555/tcp  priceless_haibt
+73096f7b91ef   pp-traclus-server1   "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:5005->5555/tcp  amazing_wright
+
+
 
 # Benchmark
 
