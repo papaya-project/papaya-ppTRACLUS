@@ -1,8 +1,0 @@
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  304k    0     0  100  304k      0   253k  0:00:01  0:00:01 --:--:--  253k100  304k    0     0  100  304k      0   138k  0:00:02  0:00:02 --:--:--  138k100  304k    0     0  100  304k      0  97401  0:00:03  0:00:03 --:--:-- 97401100  304k    0     0  100  304k      0  89088  0:00:03  0:00:03 --:--:-- 89062100  304k  100    49  100  304k     13  89088  0:00:03  0:00:03 --:--:-- 89076
-{
-  "Clusters": "1 ,1 ,1 ,1 ,2 ,2 ,2 ,2 ,2 ,2"
-}
-0.00user 0.00system 0:03.50elapsed 0%CPU (0avgtext+0avgdata 10756maxresident)k
-0inputs+8outputs (0major+557minor)pagefaults 0swaps
