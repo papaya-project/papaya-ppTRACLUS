@@ -132,33 +132,3 @@ $ curl -F 'file=@example_route_cleaned.csv' http://0.0.0.0:5002/start/100/3/5000
 
 ```
 
-# Benchmark
-
-## Client/Server1 Running on Argentera
-
-Dataset: lines_partitioned_test.csv
-Epsilon : 4500000000
-Minlns : 3
-
-| Line Segments   | Time(1 iter)| RAM(1 iter) | Time(3 iter)| RAM(3 iter) |
-|----------------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| 100             | 0:01:06     |  1.85GB     | 0:01:15     |  2GB        |
-| 400             | 0:13:34     |  10.3GB     | 0:16:40     | 11GB        | 
-| 1000            | 1:27:24     |    58GB     | 1:53:12     | 62GB        |
-
-
-
-## Client/Server1/Server2 Running on Argentera/IBM/IBM
-
-<p align="center">
-<img src="data/tests/ibm/time.png"/>
-</p>
-
-
-| Line Segments   | Time(1 Iter)| 
-|----------------:|:-----------:|
-| 100             | 0:02:53     | 
-| 400             | 0:34:17     | 
-| 1000            | 3:30:35     |
-
-
